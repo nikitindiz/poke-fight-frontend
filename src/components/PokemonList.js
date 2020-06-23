@@ -19,7 +19,11 @@ const PokemonList = (props) => {
         return (
           <div className="pokemon-list">
             <pre>
-              {JSON.stringify(pokemonList, null, '  ')}
+              {pokemonList.map(pokemon => (
+                  <div>
+                      { pokemon.name.english }
+                  </div>
+              ))}
             </pre>
           </div>
         )
