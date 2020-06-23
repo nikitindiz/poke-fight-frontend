@@ -1,10 +1,16 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
     return (
-        <div className="app-navigation">
-            navigation
-        </div>
+        <ul className="app-navigation">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/pokemon-fight">Poke Fight</Link>
+            </li>
+        </ul>
     );
 };
 
