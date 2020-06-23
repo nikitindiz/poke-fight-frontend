@@ -1,10 +1,11 @@
 import React from 'react';
-import PokemonListContainer from '../containers/PokemonListContainer';
+
+import PokeFight from '../components/PokeFight';
 
 const PokeFightPage = () => {
     return (
-        <div className="home-page">
-            <PokemonListContainer />
+        <div className="poke-fight-page">
+            <PokeFight />
         </div>
     );
 }

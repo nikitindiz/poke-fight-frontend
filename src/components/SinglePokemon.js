@@ -1,12 +1,9 @@
 import React from 'react';
-import { Link, useRouteMatch } from 'react-router-dom';
 
-const PokemonList = (props) => {
-    const match = useRouteMatch();
-
+const SinglePokemon = (props) => {
     const {
         fetchStatus,
-        pokemonList,
+        singlePokemon,
         fetchError
     } = props;
 
@@ -22,13 +19,7 @@ const PokemonList = (props) => {
         return (
           <div className="pokemon-list">
             <pre>
-              {pokemonList.map(pokemon => (
-                  <div>
-                    <Link to={`${match.url}/${pokemon.id}`}>
-                      { pokemon.name.english }
-                    </Link>
-                  </div>
-              ))}
+              {JSON.stringify(singlePokemon, null, '  ')}
             </pre>
           </div>
         )
@@ -46,4 +37,4 @@ const PokemonList = (props) => {
       );
 };
 
-export default PokemonList;
+export default SinglePokemon;
